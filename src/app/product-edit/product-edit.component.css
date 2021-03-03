@@ -1,0 +1,11 @@
+.table-bordered > thead > tr > th {
+  border-top: 1px solid #e3e3e3;
+}
+
+.custom > i {
+  font-size: 14px;
+}
+
+.custom > span {
+  font-size: 16px;
+}

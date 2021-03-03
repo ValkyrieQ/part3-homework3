@@ -1,0 +1,719 @@
+<div class="main-sidebar">
+  <div class="sidebar">
+    <div class="sidebar-form">
+      <div id="search-box">
+        <span
+          class="twitter-typeahead"
+          style="position: relative; display: inline-block"
+          ><input
+            type="text"
+            class="form-control admin-search-box typeahead tt-input"
+            placeholder="Search"
+            autocomplete="off"
+            spellcheck="false"
+            dir="auto"
+            style="position: relative; vertical-align: top" />
+          <pre
+            aria-hidden="true"
+            style="
+              position: absolute;
+              visibility: hidden;
+              white-space: pre;
+              font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial,
+                sans-serif;
+              font-size: 14px;
+              font-style: normal;
+              font-variant: normal;
+              font-weight: 400;
+              word-spacing: 0px;
+              letter-spacing: 0px;
+              text-indent: 0px;
+              text-rendering: auto;
+              text-transform: none;
+            "
+          ></pre>
+          <div
+            class="tt-menu"
+            style="
+              position: absolute;
+              top: 100%;
+              left: 0px;
+              z-index: 100;
+              display: none;
+            "
+          >
+            <div class="tt-dataset tt-dataset-pages"></div></div
+        ></span>
+      </div>
+    </div>
+    <ul class="sidebar-menu tree" data-widget="tree">
+      <li>
+        <a routerLink="" class="menu-item-link">
+          <i class="fa fa-desktop"></i>
+          <span class="menu-item-title">Dashboard</span>
+        </a>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-book"></i>
+          <span>Catalog</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a routerLink="products" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Products</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Categories</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Manufacturers</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Product reviews</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Product tags</span>
+            </a>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-dot-circle-o"></i>
+              <span>Attributes</span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Product attributes</span>
+                </a>
+              </li>
+              <li>
+                <a
+                routerLink=""
+                  class="menu-item-link"
+                >
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Specification attributes</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Checkout attributes</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-shopping-cart"></i>
+          <span>Sales</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Orders</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Shipments</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Return requests</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Recurring payments</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Gift cards</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Shopping carts and wishlists</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-user"></i>
+          <span>Customers</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Customers</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Customer roles</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Online customers</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Vendors</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Activity log</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Activity Types</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">GDPR requests (log)</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-tags"></i>
+          <span>Promotions</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Discounts</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Affiliates</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Newsletter subscribers</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Campaigns</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-cubes"></i>
+          <span>Content management</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Topics (pages)</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Message templates</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">News items</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">News comments</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Blog posts</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Blog comments</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Polls</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Forums</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-gears"></i>
+          <span>Configuration</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-dot-circle-o"></i>
+              <span>Settings</span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">General settings</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Customer settings</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Order settings</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Shipping settings</span>
+                </a>
+              </li>
+              <li>
+                <a hrouterLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Tax settings</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Catalog settings</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Shopping cart settings</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Reward points</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">GDPR settings</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Vendor settings</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Blog settings</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">News settings</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Forum settings</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Media settings</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">All settings (advanced)</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Email accounts</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Stores</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Countries</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Languages</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Currencies</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Payment methods</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Payment restrictions</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Tax providers</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Tax categories</span>
+            </a>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-dot-circle-o"></i>
+              <span>Shipping</span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Shipping providers</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Warehouses</span>
+                </a>
+              </li>
+              <li>
+                <a
+                routerLink=""
+                  class="menu-item-link"
+                >
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Pickup points</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Dates and ranges</span>
+                </a>
+              </li>
+              <li>
+                <a routerLink="" class="menu-item-link">
+                  <i class="fa fa-genderless"></i>
+                  <span class="menu-item-title">Measures</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Access control list</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Widgets</span>
+            </a>
+          </li>
+          <li>
+            <a
+            routerLink=""
+              class="menu-item-link"
+            >
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">External authentication</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Local plugins</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">All plugins and themes</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-cube"></i>
+          <span>System</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">System information</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Log</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Warnings</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Maintenance</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Message queue</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Schedule tasks</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title"
+                >Search engine friendly page names</span
+              >
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Templates</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-line-chart"></i>
+          <span>Reports</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Low stock</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Bestsellers</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Products never purchased</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="" class="menu-item-link">
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Country sales</span>
+            </a>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-dot-circle-o"></i>
+              <span>Customer reports</span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a
+                routerLink=""
+                  class="menu-item-link"
+                >
+                  <i class="fa fa-dot-circle-o"></i>
+                  <span class="menu-item-title">Registered customers</span>
+                </a>
+              </li>
+              <li>
+                <a
+                routerLink=""
+                  class="menu-item-link"
+                >
+                  <i class="fa fa-dot-circle-o"></i>
+                  <span class="menu-item-title">Customers by order total</span>
+                </a>
+              </li>
+              <li>
+                <a
+                routerLink=""
+                  class="menu-item-link"
+                >
+                  <i class="fa fa-dot-circle-o"></i>
+                  <span class="menu-item-title"
+                    >Customers by number of orders</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-question-circle"></i>
+          <span>Help</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a
+            routerLink=""
+              class="menu-item-link"
+              target="_blank"
+            >
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Help topics</span>
+            </a>
+          </li>
+          <li>
+            <a
+            routerLink=""
+              class="menu-item-link"
+              target="_blank"
+            >
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Community forums</span>
+            </a>
+          </li>
+          <li>
+            <a
+            routerLink=""
+              class="menu-item-link"
+              target="_blank"
+            >
+              <i class="fa fa-dot-circle-o"></i>
+              <span class="menu-item-title">Premium support services</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

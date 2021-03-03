@@ -1,0 +1,158 @@
+{
+  "$schema": "./node_modules/@angular/clisrc/assets/plugins/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "angular-adminlte": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/angular-adminlte",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": [
+              "src/assets/plugins/adminLTE/css/skins/_all-skins.min.css",
+              "src/assets/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css",
+              "src/assets/plugins/typeahead/typeahead.css",
+              "src/assets/plugins/fontAwesome/css/font-awesome.min.css",
+              "src/assets/plugins/jquery-ui/jquery-ui-1.10.3/jquery-ui-themes/smoothness/jquery-ui-1.10.3.custom.min.css",
+              "src/assets/plugins/datatables/css/dataTables.bootstrap.css",
+              "src/assets/plugins/datatables/datatables.min.css",
+              "src/assets/plugins/datatables/buttons.dataTables.min.css",
+              "src/assets/plugins/datatables/buttons.bootstrap.min.css",
+              "src/assets/plugins/bootstrap/css/bootstrap.min.css",
+              "src/assets/plugins/adminLTE/css/AdminLTE.min.css",
+              "src/assets/css/admin/styles.css",
+              "src/assets/plugins/ionicons/css/ionicons-2.0.1.min.css",
+              "src/styles.css",
+              "src/assets/css/chartjs-custom.css",
+              "src/assets/plugins/tinymce/tinymce.min.js",
+              "src/assets/plugins/tinymce/skins/lightgray/skin.min.css"
+            ],
+            "scripts": [
+              "src/assets/plugins/jquery/jquery-3.4.1.min.js",
+              "src/assets/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js",
+              "src/assets/plugins/bootstrap/js/bootstrap.min.js",
+              "src/assets/plugins/adminLTE/js/adminlte.js",
+              "src/assets/plugins/jquery-validate/jquery.validate-v1.19.1/jquery.validate.min.js",
+              "src/assets/plugins/jquery-validate/jquery.validate.unobtrusive-v3.2.11/jquery.validate.unobtrusive.min.js",
+              "src/assets/plugins/cldr/dist/cldr.min.js",
+              "src/assets/plugins/cldr/dist/cldr/event.min.js",
+              "src/assets/plugins/cldr/dist/cldr/supplemental.min.js",
+              "src/assets/plugins/globalize/dist/globalize.min.js",
+              "src/assets/plugins/globalize/dist/globalize/number.min.js",
+              "src/assets/plugins/globalize/dist/globalize/date.min.js",
+              "src/assets/plugins/globalize/dist/globalize/currency.min.js",
+              "src/assets/plugins/jquery-validate/jquery.validate.globalize-1.0.0.min.js",
+              "src/assets/plugins/jquery-ui/jquery-ui-1.10.3/jquery-ui-1.10.3.custom.min.js",
+              "src/assets/plugins/jquery-migrate/jquery-migrate-3.1.0.min.js",
+              "src/assets/plugins/typeahead/typeahead.bundle.min.js",
+              "src/assets/js/admin.common.js",
+              "src/assets/js/admin.navigation.js",
+              "src/assets/js/admin.search.js",
+              "src/assets/plugins/datatables/js/jquery.dataTables.min.js",
+              "src/assets/plugins/datatables/js/dataTables.bootstrap.min.js",
+              "src/assets/plugins/datatables/datatables.min.js",
+              "src/assets/plugins/datatables/moment-with-locales-2.22.2.min.js",
+              "src/assets/plugins/datatables/dataTables.buttons.min.js",
+              "src/assets/plugins/datatables/buttons.bootstrap.min.js",
+              "src/assets/plugins/chartjs/Chart.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "angular-adminlte:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "angular-adminlte:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "angular-adminlte:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "angular-adminlte:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-adminlte:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-adminlte"
+}

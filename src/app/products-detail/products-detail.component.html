@@ -1,0 +1,645 @@
+<div class="panel-body">
+  <div
+    id="products-grid_wrapper"
+    class="dataTables_wrapper form-inline dt-bootstrap no-footer"
+  >
+    <div class="row">
+      <div class="col-md-12">
+        <div class="dataTables_scroll">
+          <div
+            class="dataTables_scrollBody"
+            style="position: relative; overflow: auto; width: 100%"
+          >
+            <table
+              class="table table-bordered table-hover table-striped dataTable no-footer"
+              width="100%"
+              id="products-grid"
+              role="grid"
+              aria-describedby="products-grid_info"
+              style="width: 100%"
+            >
+              <thead>
+                <tr role="row">
+                  <th
+                    class="sorting_disabled text-center"
+                    rowspan="1"
+                    colspan="1"
+                    style="width: 45px"
+                  >
+                    <input id="mastercheckbox" type="checkbox" />
+                  </th>
+                  <th
+                    class="sorting_disabled"
+                    rowspan="1"
+                    colspan="1"
+                    style="width: 97px"
+                  >
+                    Picture
+                  </th>
+                  <th
+                    class="sorting_disabled"
+                    rowspan="1"
+                    colspan="1"
+                    style="width: 76px"
+                  >
+                    Product name
+                  </th>
+                  <th
+                    class="sorting_disabled"
+                    rowspan="1"
+                    colspan="1"
+                    style="width: 97px"
+                  >
+                    SKU
+                  </th>
+                  <th
+                    class="sorting_disabled"
+                    rowspan="1"
+                    colspan="1"
+                    style="width: 137px"
+                  >
+                    Price
+                  </th>
+                  <th
+                    class="sorting_disabled"
+                    rowspan="1"
+                    colspan="1"
+                    style="width: 95px"
+                  >
+                    Stock quantity
+                  </th>
+                  <th
+                    class="sorting_disabled"
+                    rowspan="1"
+                    colspan="1"
+                    style="width: 95px"
+                  >
+                    Product type
+                  </th>
+                  <th
+                    class="sorting_disabled text-center"
+                    rowspan="1"
+                    colspan="1"
+                    style="width: 96px"
+                  >
+                    Published
+                  </th>
+                  <th
+                    class="sorting_disabled button-column"
+                    rowspan="1"
+                    colspan="1"
+                    style="width: 96px"
+                  >
+                    Edit
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr role="row" class="odd">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="45"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>$100 Physical Gift Card</td>
+                  <td>PG_CR_100</td>
+                  <td>100</td>
+                  <td></td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="43"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>$25 Virtual Gift Card</td>
+                  <td>VG_CR_025</td>
+                  <td>25</td>
+                  <td></td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="44"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>$50 Physical Gift Card</td>
+                  <td>PG_CR_050</td>
+                  <td>50</td>
+                  <td></td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="25"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>adidas Consortium Campus 80s Running Shoes</td>
+                  <td>AD_C80_RS</td>
+                  <td>27.56</td>
+                  <td>10000</td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="10"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>Adobe Photoshop CS4</td>
+                  <td>AD_CS4_PH</td>
+                  <td>75</td>
+                  <td>10000</td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="17"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>Apple iCam</td>
+                  <td>APPLE_CAM</td>
+                  <td>1300</td>
+                  <td>10000</td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="4"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>Apple MacBook Pro 13-inch</td>
+                  <td>AP_MBP_13</td>
+                  <td>1800</td>
+                  <td>10000</td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="5"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>Asus N551JK-XO076H Laptop</td>
+                  <td>AS_551_LP</td>
+                  <td>1500</td>
+                  <td>10000</td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="21"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>Beats Pill 2.0 Wireless Speaker</td>
+                  <td>BP_20_WSP</td>
+                  <td>79.99</td>
+                  <td>10000</td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="1"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>Build your own computer</td>
+                  <td>COMP_CUST</td>
+                  <td>1200</td>
+                  <td>10000</td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="29"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>Custom T-Shirt</td>
+                  <td>CS_TSHIRT</td>
+                  <td>15</td>
+                  <td>10000</td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="2"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>Digital Storm VANQUISH 3 Custom Performance PC</td>
+                  <td>DS_VA3_PC</td>
+                  <td>1259</td>
+                  <td>10000</td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="40"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>Elegant Gemstone Necklace (rental)</td>
+                  <td>EG_GEM_NL</td>
+                  <td>30</td>
+                  <td>10000</td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="even">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="37"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>Fahrenheit 451 by Ray Bradbury</td>
+                  <td>FR_451_RB</td>
+                  <td>27</td>
+                  <td>10000</td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+                <tr role="row" class="odd">
+                  <td class="text-center">
+                    <input
+                      name="checkbox_products"
+                      value="38"
+                      type="checkbox"
+                      class="checkboxGroups"
+                    />
+                  </td>
+                  <td>
+                    <img src="assets/images/sample-product.jpeg" />
+                  </td>
+                  <td>First Prize Pies</td>
+                  <td>FIRST_PRP</td>
+                  <td>51</td>
+                  <td>10000</td>
+                  <td>Simple</td>
+                  <td class="text-center">
+                    <i class="fa fa-check true-icon" nop-value="true"></i>
+                  </td>
+                  <td class="button-column">
+                    <a class="btn btn-default" routerLink="../product/edit/1"
+                      ><i class="fa fa-pencil"></i>Edit</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row margin-t-5">
+      <div class="col-lg-5 col-xs-12">
+        <div class="float-lg-left">
+          <div
+            class="dataTables_paginate paging_simple_numbers"
+            id="products-grid_paginate"
+          >
+            <ul class="pagination">
+              <li
+                class="paginate_button previous disabled"
+                id="products-grid_previous"
+              >
+                <a
+                  href="#"
+                  aria-controls="products-grid"
+                  data-dt-idx="0"
+                  tabindex="0"
+                  ><i class="fa fa-caret-left"></i
+                ></a>
+              </li>
+              <li class="paginate_button active">
+                <a
+                  href="#"
+                  aria-controls="products-grid"
+                  data-dt-idx="1"
+                  tabindex="0"
+                  >1</a
+                >
+              </li>
+              <li class="paginate_button">
+                <a
+                  href="#"
+                  aria-controls="products-grid"
+                  data-dt-idx="2"
+                  tabindex="0"
+                  >2</a
+                >
+              </li>
+              <li class="paginate_button">
+                <a
+                  href="#"
+                  aria-controls="products-grid"
+                  data-dt-idx="3"
+                  tabindex="0"
+                  >3</a
+                >
+              </li>
+              <li class="paginate_button next" id="products-grid_next">
+                <a
+                  href="#"
+                  aria-controls="products-grid"
+                  data-dt-idx="4"
+                  tabindex="0"
+                  ><i class="fa fa-caret-right"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <div class="text-center">
+          <div class="dataTables_length" id="products-grid_length">
+            <label
+              >Show
+              <select
+                name="products-grid_length"
+                aria-controls="products-grid"
+                class="form-control input-sm"
+              >
+                <option value="7">7</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+              items</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <div class="float-lg-right text-center">
+          <div
+            class="dataTables_info"
+            id="products-grid_info"
+            role="status"
+            aria-live="polite"
+          >
+            1-15 of 45 items
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-1 col-xs-12">
+        <div class="float-lg-right text-center data-tables-refresh">
+          <div class="dt-buttons btn-group">
+            <button
+              class="btn btn-default"
+              tabindex="0"
+              aria-controls="products-grid"
+              type="button"
+            >
+              <span
+                ><i class="fa fa-refresh" style="padding-left: 5px"></i
+              ></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    id="deleteSelectedFailed-action-alert"
+    class="modal fade"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="deleteSelectedFailed-action-alert-title"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title" id="deleteSelectedFailed-action-alert-title">
+            Information
+          </h4>
+        </div>
+        <div class="modal-body">
+          <div class="additional-text" id="deleteSelectedFailed-info"></div>
+        </div>
+        <div class="modal-footer">
+          <span class="btn btn-primary pull-right" data-dismiss="modal"
+            >Ok</span
+          >
+        </div>
+      </div>
+    </div>
+    <div
+      class="btn btn-default"
+      id="deleteSelectedFailed"
+      style="display: none"
+      data-toggle="modal"
+      data-target="#deleteSelectedFailed-action-alert"
+    ></div>
+  </div>
+</div>

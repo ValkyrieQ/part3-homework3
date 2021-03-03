@@ -1,0 +1,657 @@
+<div>
+  <form>
+    <div class="content-header clearfix">
+      <h1 class="pull-left">Products</h1>
+      <div class="pull-right">
+        <button type="button" class="btn bg-blue">
+          <i class="fa fa-plus-square"></i>
+          Add new
+        </button>
+        <button type="button" name="download-catalog-pdf" class="btn bg-purple">
+          <i class="fa fa-file-pdf-o"></i>
+          Download catalog as PDF
+        </button>
+        <div class="btn-group">
+          <button type="button" class="btn btn-success">
+            <i class="fa fa-download"></i>
+            Export
+          </button>
+          <button
+            type="button"
+            class="btn btn-success dropdown-toggle"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="caret"></span>
+            <span class="sr-only">&nbsp;</span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <button type="button" name="exportxml-all">
+                <i class="fa fa-file-code-o"></i>
+                Export to XML (all found)
+              </button>
+            </li>
+            <li>
+              <button type="button" id="exportxml-selected">
+                <i class="fa fa-file-code-o"></i>
+                Export to XML (selected)
+              </button>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <button type="button" name="exportexcel-all">
+                <i class="fa fa-file-excel-o"></i>
+                Export to Excel (all found)
+              </button>
+            </li>
+            <li>
+              <button type="button" id="exportexcel-selected">
+                <i class="fa fa-file-excel-o"></i>
+                Export to Excel (selected)
+              </button>
+            </li>
+          </ul>
+        </div>
+        <button
+          type="button"
+          name="importexcel"
+          class="btn bg-olive"
+          data-toggle="modal"
+          data-target="#importexcel-window"
+        >
+          <i class="fa fa-upload"></i>
+          Import
+        </button>
+        <button
+          type="button"
+          id="delete-selected"
+          class="btn bg-red"
+          data-toggle="modal"
+          data-target="#delete-selected-action-confirmation"
+          name=""
+        >
+          <i class="fa fa-trash-o"></i>
+          Delete (selected)
+        </button>
+        <div
+          id="delete-selected-action-confirmation"
+          class="modal fade"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="delete-selected-action-confirmation-title"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+                <h4
+                  class="modal-title"
+                  id="delete-selected-action-confirmation-title"
+                >
+                  Are you sure?
+                </h4>
+              </div>
+              <div class="modal-body">
+                Are you sure you want to perform this action?
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  id="delete-selected-action-confirmation-submit-button"
+                  data-dismiss="modal"
+                  class="btn btn-primary pull-right"
+                >
+                  Yes
+                </button>
+                <span
+                  class="btn btn-default pull-right margin-r-5"
+                  data-dismiss="modal"
+                  >No, cancel</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+
+    <div class="content">
+      <div class="form-horizontal">
+        <div id="section1">
+          <div class="box box-solid">
+            <div class="box-header with-border custom">
+              <!-- Header Section -->
+              <i class="fa fa-search"></i>
+              <span>Search</span>
+              <!-- Collapse Section -->
+              <div class="box-tools">
+                <button
+                  type="button"
+                  class="btn btn-box-tool"
+                  data-widget="collapse"
+                >
+                  <i class="fa fa-minus"></i>
+                </button>
+              </div>
+
+              <!-- End Header Section -->
+            </div>
+            <div class="box-body">
+              <!-- Body Section -->
+              <div class="search-body">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="form-group">
+                      <div class="col-md-4">
+                        <div class="label-wrapper">
+                          <label class="control-label" for="SearchProductName"
+                            >Product name</label
+                          >
+                          <div
+                            title="A product name."
+                            data-toggle="tooltip"
+                            class="ico-help"
+                          >
+                            <i class="fa fa-question-circle"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <input
+                          class="form-control text-box single-line"
+                          id="SearchProductName"
+                          name="SearchProductName"
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-4">
+                        <div class="label-wrapper">
+                          <label class="control-label" for="SearchCategoryId"
+                            >Category</label
+                          >
+                          <div
+                            title="Search by a specific category."
+                            data-toggle="tooltip"
+                            class="ico-help"
+                          >
+                            <i class="fa fa-question-circle"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-control"
+                          data-val="true"
+                          data-val-required="The Category field is required."
+                          id="SearchCategoryId"
+                          name="SearchCategoryId"
+                        >
+                          <option selected="selected" value="0">All</option>
+                          <option value="1">Computers</option>
+                          <option value="2">Computers &gt;&gt; Desktops</option>
+                          <option value="3">
+                            Computers &gt;&gt; Notebooks
+                          </option>
+                          <option value="4">Computers &gt;&gt; Software</option>
+                          <option value="5">Electronics</option>
+                          <option value="6">
+                            Electronics &gt;&gt; Camera &amp; photo
+                          </option>
+                          <option value="7">
+                            Electronics &gt;&gt; Cell phones
+                          </option>
+                          <option value="8">Electronics &gt;&gt; Others</option>
+                          <option value="9">Apparel</option>
+                          <option value="10">Apparel &gt;&gt; Shoes</option>
+                          <option value="11">Apparel &gt;&gt; Clothing</option>
+                          <option value="12">
+                            Apparel &gt;&gt; Accessories
+                          </option>
+                          <option value="13">Digital downloads</option>
+                          <option value="14">Books</option>
+                          <option value="15">Jewelry</option>
+                          <option value="16">Gift Cards</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-4">
+                        <div class="label-wrapper">
+                          <label
+                            class="control-label"
+                            for="SearchIncludeSubCategories"
+                            >Search subcategories</label
+                          >
+                          <div
+                            title="Check to search in subcategories."
+                            data-toggle="tooltip"
+                            class="ico-help"
+                          >
+                            <i class="fa fa-question-circle"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <input
+                          class="check-box"
+                          data-val="true"
+                          data-val-required="The Search subcategories field is required."
+                          id="SearchIncludeSubCategories"
+                          name="SearchIncludeSubCategories"
+                          type="checkbox"
+                          value="true"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-4">
+                        <div class="label-wrapper">
+                          <label
+                            class="control-label"
+                            for="SearchManufacturerId"
+                            >Manufacturer</label
+                          >
+                          <div
+                            title="Search by a specific manufacturer."
+                            data-toggle="tooltip"
+                            class="ico-help"
+                          >
+                            <i class="fa fa-question-circle"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-control"
+                          data-val="true"
+                          data-val-required="The Manufacturer field is required."
+                          id="SearchManufacturerId"
+                          name="SearchManufacturerId"
+                        >
+                          <option selected="selected" value="0">All</option>
+                          <option value="1">Apple</option>
+                          <option value="2">HP</option>
+                          <option value="3">Nike</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-4">
+                        <div class="label-wrapper">
+                          <label class="control-label" for="SearchVendorId"
+                            >Vendor</label
+                          >
+                          <div
+                            title="Search by a specific vendor."
+                            data-toggle="tooltip"
+                            class="ico-help"
+                          >
+                            <i class="fa fa-question-circle"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-control"
+                          data-val="true"
+                          data-val-required="The Vendor field is required."
+                          id="SearchVendorId"
+                          name="SearchVendorId"
+                        >
+                          <option selected="selected" value="0">All</option>
+                          <option value="1">Vendor 1</option>
+                          <option value="2">Vendor 2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="form-group" style="display: none">
+                      <div class="col-md-4">
+                        <div class="label-wrapper">
+                          <label class="control-label" for="SearchStoreId"
+                            >Store</label
+                          >
+                          <div
+                            title="Search by a specific store."
+                            data-toggle="tooltip"
+                            class="ico-help"
+                          >
+                            <i class="fa fa-question-circle"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-control"
+                          data-val="true"
+                          data-val-required="The Store field is required."
+                          id="SearchStoreId"
+                          name="SearchStoreId"
+                        >
+                          <option selected="selected" value="0">All</option>
+                          <option value="1">Your store name</option>
+                          <option value="2">Test store 2</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-4">
+                        <div class="label-wrapper">
+                          <label class="control-label" for="SearchWarehouseId"
+                            >Warehouse</label
+                          >
+                          <div
+                            title="Search by a specific warehouse."
+                            data-toggle="tooltip"
+                            class="ico-help"
+                          >
+                            <i class="fa fa-question-circle"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-control"
+                          data-val="true"
+                          data-val-required="The Warehouse field is required."
+                          id="SearchWarehouseId"
+                          name="SearchWarehouseId"
+                        >
+                          <option selected="selected" value="0">All</option>
+                          <option value="1">Warehouse 1 (New York)</option>
+                          <option value="2">Warehouse 2 (Los Angeles)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-4">
+                        <div class="label-wrapper">
+                          <label class="control-label" for="SearchProductTypeId"
+                            >Product type</label
+                          >
+                          <div
+                            title="Search by a product type."
+                            data-toggle="tooltip"
+                            class="ico-help"
+                          >
+                            <i class="fa fa-question-circle"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-control"
+                          data-val="true"
+                          data-val-required="The Product type field is required."
+                          id="SearchProductTypeId"
+                          name="SearchProductTypeId"
+                        >
+                          <option selected="selected" value="0">All</option>
+                          <option value="5">Simple</option>
+                          <option value="10">
+                            Grouped (product with variants)
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-4">
+                        <div class="label-wrapper">
+                          <label class="control-label" for="SearchPublishedId"
+                            >Published</label
+                          >
+                          <div
+                            title='Search by a "Published" property.'
+                            data-toggle="tooltip"
+                            class="ico-help"
+                          >
+                            <i class="fa fa-question-circle"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-control"
+                          data-val="true"
+                          data-val-required="The Published field is required."
+                          id="SearchPublishedId"
+                          name="SearchPublishedId"
+                        >
+                          <option selected="selected" value="0">All</option>
+                          <option value="1">Published only</option>
+                          <option value="2">Unpublished only</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-4">
+                        <div class="label-wrapper">
+                          <label class="control-label" for="GoDirectlyToSku"
+                            >Go directly to product SKU</label
+                          >
+                          <div
+                            title="Enter product SKU and click Go."
+                            data-toggle="tooltip"
+                            class="ico-help"
+                          >
+                            <i class="fa fa-question-circle"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="input-group input-group-short">
+                          <input
+                            class="form-control text-box single-line"
+                            id="GoDirectlyToSku"
+                            name="GoDirectlyToSku"
+                            type="text"
+                            value=""
+                          />
+                          <span class="input-group-btn">
+                            <button
+                              type="button"
+                              id="go-to-product-by-sku"
+                              name="go-to-product-by-sku"
+                              class="btn btn-info btn-flat"
+                            >
+                              Go
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-7 col-md-offset-5">
+                    <button
+                      type="button"
+                      id="search-products"
+                      class="btn btn-primary btn-search"
+                    >
+                      <i class="fa fa-search"></i>
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- End Body Section -->
+            </div>
+            <!-- /.box-body -->
+          </div>
+        </div>
+        <div id="section2">
+          <div class="box box-solid">
+            <div class="box-body">
+              <!-- Body Section -->
+              <app-products-detail></app-products-detail>
+              <!-- End Body Section -->
+            </div>
+            <!-- /.box-body -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div
+    id="importexcel-window"
+    class="modal fade"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="importexcel-window-title"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title" id="importexcel-window-title">
+            Import from Excel
+          </h4>
+        </div>
+
+        <div class="form-horizontal">
+          <div class="modal-body">
+            <ul class="common-list">
+              <li>
+                <em
+                  >Imported products are distinguished by SKU. If the SKU
+                  already exists, then its corresponding product will be
+                  updated.</em
+                >
+              </li>
+              <li>
+                <em
+                  >Import requires a lot of memory resources. That's why it's
+                  not recommended to import more than 500 - 1,000 records at
+                  once. If you have more records, it's better to split them to
+                  multiple Excel files and import separately.</em
+                >
+              </li>
+            </ul>
+            <div class="form-group">
+              <div class="col-md-2">
+                <div class="label-wrapper">
+                  <label class="control-label"> Excel file </label>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <input
+                  type="file"
+                  id="importexcelfile"
+                  name="importexcelfile"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-primary">
+              Import from Excel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    id="exportXmlSelected-action-alert"
+    class="modal fade"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exportXmlSelected-action-alert-title"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title" id="exportXmlSelected-action-alert-title">
+            Information
+          </h4>
+        </div>
+        <div class="modal-body">
+          <div class="additional-text" id="exportXmlSelected-info"></div>
+        </div>
+        <div class="modal-footer">
+          <span class="btn btn-primary pull-right" data-dismiss="modal"
+            >Ok</span
+          >
+        </div>
+      </div>
+    </div>
+    <div
+      class="btn btn-default"
+      id="exportXmlSelected"
+      style="display: none"
+      data-toggle="modal"
+      data-target="#exportXmlSelected-action-alert"
+    ></div>
+  </div>
+  <div
+    id="exportExcelSelected-action-alert"
+    class="modal fade"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exportExcelSelected-action-alert-title"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title" id="exportExcelSelected-action-alert-title">
+            Information
+          </h4>
+        </div>
+        <div class="modal-body">
+          <div class="additional-text" id="exportExcelSelected-info"></div>
+        </div>
+        <div class="modal-footer">
+          <span class="btn btn-primary pull-right" data-dismiss="modal"
+            >Ok</span
+          >
+        </div>
+      </div>
+    </div>
+    <div
+      class="btn btn-default"
+      id="exportExcelSelected"
+      style="display: none"
+      data-toggle="modal"
+      data-target="#exportExcelSelected-action-alert"
+    ></div>
+  </div>
+</div>
